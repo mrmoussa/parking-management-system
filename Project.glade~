@@ -1,0 +1,1508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.2 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkWindow" id="AddParkingWindow">
+    <property name="can_focus">False</property>
+    <property name="default_width">500</property>
+    <property name="default_height">400</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="AddParkingFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">245</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Adding Parking</property>
+            <attributes>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">122</property>
+            <property name="y">40</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">170</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Location:</property>
+          </object>
+          <packing>
+            <property name="x">50</property>
+            <property name="y">110</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">170</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Capacity:
+</property>
+          </object>
+          <packing>
+            <property name="x">50</property>
+            <property name="y">190</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="AddLocationEnt">
+            <property name="width_request">170</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="max_width_chars">0</property>
+            <signal name="changed" handler="on_AddLocationEnt_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">230</property>
+            <property name="y">110</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="AddCapacityEnt">
+            <property name="width_request">170</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <signal name="changed" handler="on_AddCapacityEnt_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">230</property>
+            <property name="y">190</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="AddParkingBtn">
+            <property name="label" translatable="yes">ADD</property>
+            <property name="width_request">165</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_AddParkingBtn_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">141</property>
+            <property name="y">268</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="AddWindow">
+    <property name="can_focus">False</property>
+    <property name="default_width">500</property>
+    <property name="default_height">400</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="AddFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">180</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Adding Parking Manager</property>
+          </object>
+          <packing>
+            <property name="x">120</property>
+            <property name="y">40</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="username">
+            <property name="width_request">165</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Username</property>
+          </object>
+          <packing>
+            <property name="x">50</property>
+            <property name="y">110</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="parkID">
+            <property name="width_request">165</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Parking ID</property>
+          </object>
+          <packing>
+            <property name="x">50</property>
+            <property name="y">170</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="Password">
+            <property name="width_request">165</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Password</property>
+          </object>
+          <packing>
+            <property name="x">50</property>
+            <property name="y">230</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="AddBtn">
+            <property name="label" translatable="yes">ADD</property>
+            <property name="width_request">165</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="margin_bottom">5</property>
+            <signal name="clicked" handler="on_AddBtn_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">157</property>
+            <property name="y">332</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="UsernameEnt">
+            <property name="width_request">168</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <signal name="changed" handler="on_UsernameEnt_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">230</property>
+            <property name="y">110</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="ParkIDEnt">
+            <property name="width_request">168</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <signal name="changed" handler="on_ParkIDEnt_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">230</property>
+            <property name="y">170</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="PasswordEnt">
+            <property name="width_request">168</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <signal name="changed" handler="on_PasswordEnt_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">230</property>
+            <property name="y">230</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="DeleteParkingWindow">
+    <property name="can_focus">False</property>
+    <property name="default_width">500</property>
+    <property name="default_height">400</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="DeleteParkingFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">245</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Delete Parking</property>
+            <attributes>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">120</property>
+            <property name="y">40</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">170</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Parking ID:</property>
+          </object>
+          <packing>
+            <property name="x">50</property>
+            <property name="y">110</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="DeleteParkingBtn">
+            <property name="label" translatable="yes">Delete</property>
+            <property name="width_request">165</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_DeleteParkingBtn_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">154</property>
+            <property name="y">182</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="DeleteParkingEnt">
+            <property name="width_request">170</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <signal name="changed" handler="on_DeleteParkingEnt_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">230</property>
+            <property name="y">110</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="DeleteWindow">
+    <property name="can_focus">False</property>
+    <property name="default_width">500</property>
+    <property name="default_height">400</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="DelFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">165</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Delete Parking Manager</property>
+          </object>
+          <packing>
+            <property name="x">120</property>
+            <property name="y">40</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="userID">
+            <property name="width_request">165</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">User ID</property>
+          </object>
+          <packing>
+            <property name="x">50</property>
+            <property name="y">110</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="DelEnt">
+            <property name="width_request">165</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <signal name="changed" handler="on_DelEnt_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">230</property>
+            <property name="y">110</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="DelBtn">
+            <property name="label" translatable="yes">Delete</property>
+            <property name="width_request">165</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="margin_bottom">5</property>
+            <signal name="clicked" handler="on_DelBtn_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">154</property>
+            <property name="y">182</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="RegWindow">
+    <property name="can_focus">False</property>
+    <property name="default_width">500</property>
+    <property name="default_height">400</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="RegFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel" id="RegisterLabel">
+            <property name="width_request">100</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Register a car</property>
+            <attributes>
+              <attribute name="scale" value="1.5"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">150</property>
+            <property name="y">40</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="RegCarID">
+            <property name="width_request">170</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Car Reg Num</property>
+            <attributes>
+              <attribute name="scale" value="1.2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">50</property>
+            <property name="y">110</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="RegTimeIn">
+            <property name="width_request">170</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Time In</property>
+            <attributes>
+              <attribute name="scale" value="1.2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">50</property>
+            <property name="y">170</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="RegCarEntry1">
+            <property name="width_request">100</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <signal name="changed" handler="on_RegCarEntry1_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">230</property>
+            <property name="y">110</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="RegCarEntry2">
+            <property name="width_request">100</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <signal name="changed" handler="on_RegCarEntry2_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">230</property>
+            <property name="y">170</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="RegButton">
+            <property name="label" translatable="yes">REGISTER</property>
+            <property name="width_request">165</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_RegButton_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">140</property>
+            <property name="y">268</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="RelWindow">
+    <property name="can_focus">False</property>
+    <property name="default_width">500</property>
+    <property name="default_height">400</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="RelFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel" id="ReleaseLabel">
+            <property name="width_request">100</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Release a car</property>
+            <attributes>
+              <attribute name="scale" value="1.5"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">150</property>
+            <property name="y">15</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="RelCarID">
+            <property name="width_request">170</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Car ID</property>
+            <attributes>
+              <attribute name="scale" value="1.2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">50</property>
+            <property name="y">110</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="TimeOut">
+            <property name="width_request">170</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">TimeOut</property>
+            <attributes>
+              <attribute name="scale" value="1.2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">50</property>
+            <property name="y">170</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="RelButton">
+            <property name="label" translatable="yes">RELEASE</property>
+            <property name="width_request">165</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_RelButton_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">140</property>
+            <property name="y">268</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="RelCarEntry1">
+            <property name="width_request">100</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <signal name="changed" handler="on_RelCarEntry1_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">230</property>
+            <property name="y">110</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="RelCarEntry2">
+            <property name="width_request">100</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <signal name="changed" handler="on_RelCarEntry2_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">230</property>
+            <property name="y">170</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkTreeStore" id="SeeParkingStore">
+    <columns>
+      <!-- column-name ParkingID -->
+      <column type="gchararray"/>
+      <!-- column-name LocationCol -->
+      <column type="gchararray"/>
+      <!-- column-name CapacityCol -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkWindow" id="SeeParkingWindow">
+    <property name="can_focus">False</property>
+    <property name="default_width">500</property>
+    <property name="default_height">500</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="SeeParkingFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkViewport" id="SeeParkingViewport">
+            <property name="width_request">400</property>
+            <property name="height_request">400</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkTreeView" id="SeeParkingTree">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="model">SeeParkingStore</property>
+                <child internal-child="selection">
+                  <object class="GtkTreeSelection" id="SelectParking">
+                    <signal name="changed" handler="on_SelectParking_changed" swapped="no"/>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="ParkingID">
+                    <property name="title" translatable="yes">ID</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="cr1"/>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="LocationCol">
+                    <property name="title" translatable="yes">Location</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="cr2"/>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="CapacityCol">
+                    <property name="title" translatable="yes">Capacity</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="cr3"/>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">35</property>
+            <property name="y">17</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkTreeStore" id="SeeTreeStore">
+    <columns>
+      <!-- column-name c1 -->
+      <column type="gchararray"/>
+      <!-- column-name c2 -->
+      <column type="gchararray"/>
+      <!-- column-name c3 -->
+      <column type="gchararray"/>
+      <!-- column-name c4 -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkWindow" id="SeeWindow">
+    <property name="can_focus">False</property>
+    <property name="default_width">500</property>
+    <property name="default_height">500</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="SeeFixed">
+        <property name="width_request">419</property>
+        <property name="height_request">342</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkViewport" id="SeeView">
+            <property name="width_request">408</property>
+            <property name="height_request">303</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkTreeView" id="SeeTreeView">
+                <property name="width_request">100</property>
+                <property name="height_request">80</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="model">SeeTreeStore</property>
+                <child internal-child="selection">
+                  <object class="GtkTreeSelection" id="select">
+                    <signal name="changed" handler="on_select_changed" swapped="no"/>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="SCol1">
+                    <property name="title" translatable="yes">ID</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="sw1"/>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="SCol2">
+                    <property name="title" translatable="yes">Car Registration Number</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="sw2"/>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="SCol3">
+                    <property name="title" translatable="yes">Time In</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="sw3"/>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="SCol4">
+                    <property name="title" translatable="yes">Time Out</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="sw4"/>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">10</property>
+            <property name="y">10</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="UpdWindow">
+    <property name="can_focus">False</property>
+    <property name="default_width">500</property>
+    <property name="default_height">400</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="UpdFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">180</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Update Parking Manager</property>
+          </object>
+          <packing>
+            <property name="x">122</property>
+            <property name="y">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">165</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">User ID</property>
+          </object>
+          <packing>
+            <property name="x">60</property>
+            <property name="y">61</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">165</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">New Username</property>
+          </object>
+          <packing>
+            <property name="x">60</property>
+            <property name="y">102</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">165</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">New Password</property>
+          </object>
+          <packing>
+            <property name="x">60</property>
+            <property name="y">149</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="UpdBtn">
+            <property name="label" translatable="yes">Update</property>
+            <property name="width_request">165</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="margin_bottom">5</property>
+            <signal name="clicked" handler="on_UpdBtn_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">133</property>
+            <property name="y">222</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="UserEnt">
+            <property name="width_request">168</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <signal name="changed" handler="on_UserEnt_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">203</property>
+            <property name="y">65</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="NewUserEnt">
+            <property name="width_request">168</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <signal name="changed" handler="on_NewUserEnt_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">203</property>
+            <property name="y">109</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="NewPassEnt">
+            <property name="width_request">168</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <signal name="changed" handler="on_NewPassEnt_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">203</property>
+            <property name="y">158</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="UpdateParkingWindow">
+    <property name="can_focus">False</property>
+    <property name="default_width">500</property>
+    <property name="default_height">400</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="UpdateParkingFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">245</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Update Parking</property>
+            <attributes>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">120</property>
+            <property name="y">40</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">170</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Parking ID:</property>
+          </object>
+          <packing>
+            <property name="x">50</property>
+            <property name="y">110</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">170</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">New Location:</property>
+          </object>
+          <packing>
+            <property name="x">50</property>
+            <property name="y">170</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">170</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">New Capacity:</property>
+          </object>
+          <packing>
+            <property name="x">50</property>
+            <property name="y">230</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="ParkingIDEnt">
+            <property name="width_request">170</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <signal name="changed" handler="on_ParkingIDEnt_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">230</property>
+            <property name="y">110</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="NewCapacityEnt">
+            <property name="width_request">170</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <signal name="changed" handler="on_NewCapacityEnt_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">230</property>
+            <property name="y">230</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="NewLocationEnt">
+            <property name="width_request">170</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <signal name="changed" handler="on_NewLocationEnt_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">230</property>
+            <property name="y">170</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="UpdateParkingBtn">
+            <property name="label" translatable="yes">UPDATE</property>
+            <property name="width_request">165</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_UpdateParkingBtn_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">157</property>
+            <property name="y">332</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkImage" id="image1">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-quit</property>
+  </object>
+  <object class="GtkWindow" id="window1">
+    <property name="can_focus">False</property>
+    <property name="default_width">500</property>
+    <property name="default_height">500</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="PMfixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkButton" id="RegBtn">
+            <property name="label" translatable="yes">Register a car</property>
+            <property name="width_request">180</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Register a new car for this parking </property>
+            <signal name="clicked" handler="on_RegBtn_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">145</property>
+            <property name="y">116</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="SeeBtn">
+            <property name="label" translatable="yes">See all cars</property>
+            <property name="width_request">180</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Manage all cars in this parking</property>
+            <signal name="clicked" handler="on_SeeBtn_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">145</property>
+            <property name="y">228</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="PMlabel">
+            <property name="width_request">256</property>
+            <property name="height_request">32</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Parking Manager</property>
+            <property name="justify">center</property>
+            <attributes>
+              <attribute name="font-desc" value="System-ui Bold 10"/>
+              <attribute name="scale" value="2"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">109</property>
+            <property name="y">17</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="RelBtn">
+            <property name="label" translatable="yes">Release slot</property>
+            <property name="width_request">180</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_RelBtn_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">145</property>
+            <property name="y">172</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="Loclabel">
+            <property name="width_request">100</property>
+            <property name="height_request">22</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Location:</property>
+          </object>
+          <packing>
+            <property name="x">8</property>
+            <property name="y">75</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="LogOutPM">
+            <property name="label" translatable="yes">Log out</property>
+            <property name="width_request">180</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Manage all cars in this parking</property>
+            <signal name="clicked" handler="on_LogOutPM_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">145</property>
+            <property name="y">285</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="ExitPM">
+            <property name="width_request">35</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="image">image1</property>
+            <signal name="clicked" handler="on_ExitPM_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">399</property>
+            <property name="y">6</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkImage" id="image2">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-quit</property>
+  </object>
+  <object class="GtkWindow" id="window">
+    <property name="can_focus">False</property>
+    <property name="default_width">600</property>
+    <property name="default_height">600</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="fixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkButton" id="LoginBtn">
+            <property name="label" translatable="yes">Log in</property>
+            <property name="width_request">215</property>
+            <property name="height_request">46</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_LoginBtn_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">173</property>
+            <property name="y">221</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="usernameEntry">
+            <property name="width_request">240</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="placeholder_text" translatable="yes">username</property>
+            <signal name="changed" handler="on_usernameEntry_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">160</property>
+            <property name="y">91</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="passwordEntry">
+            <property name="width_request">240</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="visibility">False</property>
+            <property name="invisible_char">•</property>
+            <property name="placeholder_text" translatable="yes">password</property>
+            <signal name="changed" handler="on_passwordEntry_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">161</property>
+            <property name="y">149</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="projectTitle">
+            <property name="width_request">385</property>
+            <property name="height_request">44</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Parking Management System</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+              <attribute name="foreground" value="#000000000000"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">102</property>
+            <property name="y">17</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="Exit">
+            <property name="width_request">36</property>
+            <property name="height_request">34</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="image">image2</property>
+            <signal name="clicked" handler="on_Exit_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">542</property>
+            <property name="y">23</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkImage" id="image3">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-quit</property>
+  </object>
+  <object class="GtkWindow" id="AdminWindow1">
+    <property name="can_focus">False</property>
+    <property name="default_width">500</property>
+    <property name="default_height">500</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="AdminCon1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkButton" id="AddPM">
+            <property name="label" translatable="yes">Add PM</property>
+            <property name="width_request">180</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_AddPM_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">50</property>
+            <property name="y">127</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="DelPM">
+            <property name="label" translatable="yes">Delete PM</property>
+            <property name="width_request">180</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_DelPM_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">50</property>
+            <property name="y">186</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="UpdatePM">
+            <property name="label" translatable="yes">Update PM</property>
+            <property name="width_request">180</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_UpdatePM_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">50</property>
+            <property name="y">242</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="ViewAll">
+            <property name="label" translatable="yes">See all PM</property>
+            <property name="width_request">180</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="margin_bottom">10</property>
+            <signal name="clicked" handler="on_ViewAll_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">50</property>
+            <property name="y">300</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="TestLabel">
+            <property name="width_request">188</property>
+            <property name="height_request">31</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+          </object>
+          <packing>
+            <property name="x">303</property>
+            <property name="y">381</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="ViewAllParking">
+            <property name="label" translatable="yes">See all Parking</property>
+            <property name="width_request">180</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_ViewAllParking_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">250</property>
+            <property name="y">300</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="DeleteParking">
+            <property name="label" translatable="yes">Delete Parking</property>
+            <property name="width_request">180</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_DeleteParking_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">250</property>
+            <property name="y">186</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="AddParking">
+            <property name="label" translatable="yes">Add Parking</property>
+            <property name="width_request">180</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_AddParking_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">250</property>
+            <property name="y">127</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="UpdateParking">
+            <property name="label" translatable="yes">Update Parking</property>
+            <property name="width_request">180</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_UpdateParking_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">251</property>
+            <property name="y">242</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="adminLbl">
+            <property name="width_request">202</property>
+            <property name="height_request">35</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">ADMINISTRATOR</property>
+            <attributes>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">150</property>
+            <property name="y">15</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="PMLbl">
+            <property name="width_request">150</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Parking Manager</property>
+            <attributes>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">72</property>
+            <property name="y">70</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="ParkingLbl">
+            <property name="width_request">150</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Parking</property>
+            <attributes>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">270</property>
+            <property name="y">70</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="LogoutBtn">
+            <property name="label" translatable="yes">Log out</property>
+            <property name="width_request">114</property>
+            <property name="height_request">45</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_LogoutBtn_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">181</property>
+            <property name="y">374</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="ExitAdmin">
+            <property name="width_request">36</property>
+            <property name="height_request">34</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="image">image3</property>
+            <signal name="clicked" handler="on_ExitAdmin_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">445</property>
+            <property name="y">13</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkTreeStore" id="treePM">
+    <columns>
+      <!-- column-name t1 -->
+      <column type="gchararray"/>
+      <!-- column-name t2 -->
+      <column type="gchararray"/>
+      <!-- column-name t3 -->
+      <column type="gchararray"/>
+      <!-- column-name t4 -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkWindow" id="WindowPM">
+    <property name="can_focus">False</property>
+    <property name="default_width">500</property>
+    <property name="default_height">500</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="FixedPM">
+        <property name="width_request">419</property>
+        <property name="height_request">342</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkViewport" id="ViewPM">
+            <property name="width_request">408</property>
+            <property name="height_request">303</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkTreeView" id="TreeViewPM">
+                <property name="width_request">100</property>
+                <property name="height_request">80</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="model">treePM</property>
+                <child internal-child="selection">
+                  <object class="GtkTreeSelection" id="selectPM">
+                    <signal name="changed" handler="on_selectPM_changed" swapped="no"/>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="Column1">
+                    <property name="title" translatable="yes">ID</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="sa1"/>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="Column2">
+                    <property name="title" translatable="yes">Username</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="sa2"/>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="Column3">
+                    <property name="title" translatable="yes">Password</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="sa3"/>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="Column4">
+                    <property name="title" translatable="yes">Associated Parking</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="sa4"/>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">10</property>
+            <property name="y">10</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
